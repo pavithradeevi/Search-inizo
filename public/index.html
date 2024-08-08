@@ -11,67 +11,105 @@
             background-color: white;
             color: #333;
             position: relative; 
+            padding-top: 70px; 
         }
+
+        #logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; 
+            height: auto;
+        }
+
         h1 {
             text-align: center;
             color: #2c3e50;
+            margin-top: 1px; 
+            margin-bottom: 20px; 
         }
-        #search-container {
-                display: flex; 
-                justify-content: center; 
-                margin-bottom: 20px;
-            }
 
-            #searchInput {
-                flex: 1;
-                max-width: 300px;
-                margin-right: 10px; 
-}
+        #search-container {
+            display: flex; 
+            justify-content: center; 
+            margin-bottom: 20px; 
+            flex-wrap: wrap; 
+        }
+
+        #searchInput {
+            flex: 1;
+            max-width: 300px;
+            margin-right: 10px; 
+            min-width: 150px; 
+        }
 
         #searchButton, #saveButton {
             padding: 10px 15px;
             font-size: 16px;
-            margin-left: 10px;
             cursor: pointer;
             border: none;
             border-radius: 5px;
             background-color: #43aaee;
             color: white;
             transition: background-color 0.3s;
+            margin-left: 10px; 
         }
+
         #searchButton:hover, #saveButton:hover {
             background-color: #0d92eb;
         }
+
         #results {
             margin-top: 20px;
-            /* background: rgb(169, 23, 23); */
             padding: 15px;
-            /* border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
         }
+
         .result-item {
             margin-bottom: 15px;
             border-bottom: 1px solid #907c7c;
             padding-bottom: 10px;
         }
+
         .result-item h3 {
             margin: 0;
             color: #2980b9;
         }
+
         .result-item p {
             margin: 5px 0 0;
             color: #555;
         }
-        #logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
+
+        @media (max-width: 600px) {
+            #logo {
+                width: 40px; 
+            }
+            h1 {
+                margin-top: 10px; 
+            }
+            #search-container {
+                justify-content: center; 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            #searchInput {
+                margin-bottom: 10px; 
+                width: 100%; 
+                max-width: none; 
+            }
+            #searchButton {
+                width: 100%;
+                margin-left: 0; 
+            }
+            #saveButton {
+                width: 100%; 
+                margin-top: 10px; 
+            }
         }
     </style>
 </head>
 <body>
-    <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvNwt6in7avu2nyd4auwzoAtkAOzIyypZCQ&s" alt="Inizio Logo">
+    <img id="logo" src="https://media.licdn.com/dms/image/C560BAQEjY1YpZo-u5w/company-logo_200_200/0/1630623373689/inizio_sro_logo?e=2147483647&v=beta&t=J22LyLyrG950DOz-2vrr-fGUeqXAROdGz7IKqkq-UiM" alt="Inizio Logo"/>
     <h1>Welcome to Inizio Internet Media Search</h1>
     <div id="search-container">
         <input type="text" id="searchInput" placeholder="Enter your search" />
